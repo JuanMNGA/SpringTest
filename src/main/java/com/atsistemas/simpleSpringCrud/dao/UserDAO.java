@@ -23,6 +23,8 @@ public interface UserDAO extends CrudRepository<User, Integer>{
     @Query(value = "SELECT u FROM User AS u WHERE u.id = :id")
     public User findOne(@Param("id") Integer id);
 
-    @Query(value = "SELECT u FROM User AS u")
+    
+    @Query(value = "SELECT u FROM User AS u WHERE")
     public List<User> findAll(Pageable pageable);
+    
 }

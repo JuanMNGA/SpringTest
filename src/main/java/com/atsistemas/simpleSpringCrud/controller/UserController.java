@@ -33,7 +33,6 @@ public class UserController {
     }
     @RequestMapping(method = { RequestMethod.POST })
     public UserDTO create(@RequestBody UserDTO user) {
-        System.out.println(user.toString());
         return userService.create(user);
     }
 
